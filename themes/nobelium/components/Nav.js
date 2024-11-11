@@ -63,7 +63,12 @@ const Nav = props => {
                   alt={siteConfig('AUTHOR')}
                 />
               ) : (
-                <SvgIcon />
+                <img 
+                src="https://fav.farm/🚢"
+                width={24}
+                height={24}
+                alt={siteConfig('TITLE')}
+                />
               )}
             </div>
           </Link>
