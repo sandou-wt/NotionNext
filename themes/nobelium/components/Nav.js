@@ -55,21 +55,12 @@ const Nav = props => {
           <Link href='/' aria-label={siteConfig('TITLE')}>
             <div className='h-6 w-6'>
               {/* <SvgIcon/> */}
-              {siteConfig('NOBELIUM_NAV_NOTION_ICON') ? (
-                <LazyImage
-                  src={siteInfo?.icon}
-                  width={24}
-                  height={24}
-                  alt={siteConfig('AUTHOR')}
-                />
-              ) : (
                 <img 
                 src="https://fav.farm/🚢"
                 width={24}
                 height={24}
                 alt={siteConfig('TITLE')}
                 />
-              )}
             </div>
           </Link>
           <p className='ml-2 text-xl font-bold text-gray-800 dark:text-gray-300 header-name whitespace-nowrap'>
