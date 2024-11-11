@@ -21,13 +21,13 @@ export const ArticleInfo = (props) => {
                 <nav className="flex mt-7 items-start text-gray-500 dark:text-gray-400">
                     <div className="flex mb-4">
                         <a href={siteConfig('CONTACT_GITHUB', '#')} className="flex">
-                            <Image
+                            {/* <Image
                                 alt={siteConfig('AUTHOR')}
                                 width={24}
                                 height={24}
                                 src={`https://gravatar.com/avatar/${emailHash}`}
                                 className="rounded-full"
-                            />
+                            /> */}
                             <p className="ml-2 md:block">{siteConfig('AUTHOR')}</p>
                         </a>
                         <span className="block">&nbsp;/&nbsp;</span>
