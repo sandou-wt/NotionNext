@@ -67,16 +67,10 @@ const Nav = props => {
               )}
             </div>
           </Link>
-          {post ? (
-            <p className='ml-2 font-medium text-gray-800 dark:text-gray-300 header-name'>
-              {post?.title}
-            </p>
-          ) : (
-            <p className='ml-2 font-medium text-gray-800 dark:text-gray-300 header-name whitespace-nowrap'>
-              {siteConfig('TITLE')}
-              {/* ,{' '}<span className="font-normal">{siteConfig('DESCRIPTION')}</span> */}
-            </p>
-          )}
+          <p className='ml-2 font-medium text-gray-800 dark:text-gray-300 header-name whitespace-nowrap'>
+            {siteConfig('TITLE')}
+            {/* ,{' '}<span className="font-normal">{siteConfig('DESCRIPTION')}</span> */}
+          </p>
         </div>
         <NavBar {...props} />
       </div>
