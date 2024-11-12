@@ -23,7 +23,7 @@ import Catalog from './components/Catalog'
 import { Footer } from './components/Footer'
 import JumpToTopButton from './components/JumpToTopButton'
 import Nav from './components/Nav'
-import SearchNavBar from './components/SearchNavBar'
+import SearchNavBar from './components/SearchNavBar' 
 import CONFIG from './config'
 import { Style } from './style'
 
