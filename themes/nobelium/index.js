@@ -70,12 +70,12 @@ const LayoutBase = props => {
             show={!onLoading}
             appear={true}
             enter='transition ease-in-out duration-700 transform order-first'
-            enterFrom='translate-y-16'
-            enterTo='translate-y-0'
+            enterFrom='opacity-0 translate-y-16'
+            enterTo='opacity-100'
             leave='transition ease-in-out duration-300 transform'
-            leaveFrom='translate-y-0'
-            leaveTo='-translate-y-16'
-            unmount={false}>  
+            leaveFrom='opacity-100 translate-y-0'
+            leaveTo='opacity-0 -translate-y-16'
+            unmount={false}>
             {/* 顶部插槽 */}
             {topSlot}
             {children}
