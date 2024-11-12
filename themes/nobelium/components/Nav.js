@@ -86,6 +86,7 @@ const NavBar = props => {
   let links = [
     {
       id: 2,
+      icon: 'fas fa-rss',
       name: locale.NAV.RSS,
       href: '/feed',
       show: siteConfig('ENABLE_RSS') && siteConfig('NOBELIUM_MENU_RSS'),
