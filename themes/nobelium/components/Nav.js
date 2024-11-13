@@ -56,9 +56,9 @@ const Nav = props => {
             <div className='h-6 w-6'>
               {/* <SvgIcon/> */}
                 <img 
-                src="https://s2.loli.net/2024/11/13/2VwW9KqyMxYZa8F.png"
-                width={24}
-                height={24}
+                src="public/site_logo.png"
+                width={28}
+                height={28}
                 alt={siteConfig('TITLE')}
                 className='mb-[2px]'
                 />
