@@ -60,6 +60,7 @@ const Nav = props => {
                 width={24}
                 height={24}
                 alt={siteConfig('TITLE')}
+                style={{ verticalAlign: 'middle' }}
                 />
             </div>
           </Link>
