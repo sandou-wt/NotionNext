@@ -60,7 +60,7 @@ const Nav = props => {
                 width={28}
                 height={28}
                 alt={siteConfig('TITLE')}
-                className='mb-[2px]'
+                className='mb-[3px]'
                 />
             </div>
           </Link>
