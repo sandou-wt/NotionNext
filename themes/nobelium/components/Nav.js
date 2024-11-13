@@ -56,7 +56,7 @@ const Nav = props => {
             <div className='h-6 w-6'>
               {/* <SvgIcon/> */}
                 <img 
-                src="public/site_logo.png"
+                src="/site_logo.png"
                 width={28}
                 height={28}
                 alt={siteConfig('TITLE')}
