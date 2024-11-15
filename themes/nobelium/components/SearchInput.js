@@ -5,7 +5,7 @@ import { useImperativeHandle, useRef, useState } from 'react'
 let lock = false
 
 const SearchInput = props => {
-  const { tag, keyword, cRef } = props
+  const { tag, keyword, cRef, category } = props
   const { locale } = useGlobal()
   const router = useRouter()
   const searchInputRef = useRef(null)
@@ -19,12 +19,13 @@ const SearchInput = props => {
   const handleSearch = () => {
     const key = searchInputRef.current.value
     if (key && key !== '') {
-      router.push({ pathname: '/search/' + key }).then(r => {
-        // console.log('搜索', key)
-      })
+      if (category) {
+        router.push({ pathname: '/category/' + key })
+      } else {
+        router.push({ pathname: '/search/' + key })
+      }
     } else {
-      router.push({ pathname: '/' }).then(r => {
-      })
+      router.push({ pathname: '/' })
     }
   }
   const handleKeyUp = (e) => {
@@ -62,7 +63,7 @@ const SearchInput = props => {
   <input
     ref={searchInputRef}
     type='text'
-    placeholder={tag ? `${locale.SEARCH.TAGS} #${tag}` : `${locale.SEARCH.ARTICLES}`}
+    placeholder={tag ? `${locale.SEARCH.TAGS} #${tag}` : category ? `${locale.SEARCH.CATEGORIES}` : `${locale.SEARCH.ARTICLES}`}
     className={'outline-none w-full text-sm pl-4 transition focus:shadow-lg font-light leading-10 text-black bg-gray-100 dark:bg-gray-900 dark:text-white'}
     onKeyUp={handleKeyUp}
     onCompositionStart={lockSearchInput}
