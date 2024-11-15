@@ -13,7 +13,7 @@ const BlogPost = ({ post }) => {
     <Link href={post?.href}>
       <article key={post.id} className='mb-6 md:mb-8'>
         <header className='flex flex-col justify-between md:flex-row md:items-baseline'>
-          <h2 className='text-base md:text-lg font-medium hover:scale-x-105 mb-2 dark:hover:text-gray-300 overflow-x-hidden hover:underline cursor-pointer text-black dark:text-gray-100'>
+          <h2 className='text-base md:text-lg font-medium hover:scale-x-105 mb-2 hover:text-yellow-500 overflow-x-hidden hover:underline duration-300 transition-colors cursor-pointer text-black dark:text-gray-100'>
             {siteConfig('POST_TITLE_ICON') && (
               <NotionIcon icon={post.pageIcon} />
             )}
