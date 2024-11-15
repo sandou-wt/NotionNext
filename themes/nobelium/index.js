@@ -118,16 +118,15 @@ const LayoutIndex = props => {
  * @param {*} props
  * @returns
  */
-const LayoutPostList = ({ posts, topSlot, tag, selectedCategory }) => {
+const LayoutPostList = props => {
+  const { posts, topSlot, tag } = props
   const { filterKey } = useNobeliumGlobal()
   let filteredBlogPosts = []
-
-  // 根据 filterKey 或 selectedCategory 进行过滤
-  if ((filterKey || selectedCategory) && posts) {
+  if (filterKey && posts) {
     filteredBlogPosts = posts.filter(post => {
       const tagContent = post?.tags ? post?.tags.join(' ') : ''
       const searchContent = post.title + post.summary + tagContent
-      return searchContent.toLowerCase().includes((filterKey || selectedCategory).toLowerCase())
+      return searchContent.toLowerCase().includes(filterKey.toLowerCase())
     })
   } else {
     filteredBlogPosts = deepClone(posts)
@@ -136,7 +135,7 @@ const LayoutPostList = ({ posts, topSlot, tag, selectedCategory }) => {
   return (
     <>
       {topSlot}
-      {(tag || selectedCategory) && <SearchNavBar {...props} />}
+      {tag && <SearchNavBar {...props} />}
       {siteConfig('POST_LIST_STYLE') === 'page' ? (
         <BlogListPage {...props} posts={filteredBlogPosts} />
       ) : (
@@ -275,19 +274,31 @@ const Layout404 = props => {
  * @param {*} props
  * @returns
  */
-const LayoutCategoryIndex = ({ categoryOptions, onCategoryClick }) => {
+const LayoutCategoryIndex = props => {
+  const { categoryOptions } = props
+
   return (
-    <div id='category-list' className='duration-200 flex flex-wrap'>
-      {categoryOptions?.map(category => (
-        <div
-          key={category.name}
-          onClick={() => onCategoryClick(category.name)}
-          className='hover:text-black dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600 px-5 cursor-pointer py-2 hover:bg-gray-100'>
-          <i className='mr-4 fas fa-folder' />
-          {category.name}({category.count})
-        </div>
-      ))}
-    </div>
+    <>
+      <div id='category-list' className='duration-200 flex flex-wrap'>
+        {categoryOptions?.map(category => {
+          return (
+            <Link
+              key={category.name}
+              href={`/category/${category.name}`}
+              passHref
+              legacyBehavior>
+              <div
+                className={
+                  'hover:text-black dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600 px-5 cursor-pointer py-2 hover:bg-gray-100'
+                }>
+                <i className='mr-4 fas fa-folder' />
+                {category.name}({category.count})
+              </div>
+            </Link>
+          )
+        })}
+      </div>
+    </>
   )
 }
 
