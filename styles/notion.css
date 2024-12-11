@@ -545,10 +545,10 @@ summary > .notion-h {
   width: 100%;
   white-space: pre-wrap;
   word-break: break-word;
-  border-left: 3px solid currentcolor;
+  border-left: 2px solid currentcolor;
   padding: 0.1em 0.45em; /* 缩小50% */
   margin: 3px 0; /* 缩小50% */
-  font-size: 0.6em; /* 缩小50% */
+  font-size: 12px !important; /* 缩小50% */
 }
 
 .notion-hr {
@@ -1974,8 +1974,8 @@ svg + .notion-page-title-text {
   border-left: 10px solid;
   padding: 0.2em 0.9em;
   margin: 6px 0;
-  font-size: 0.6em;
-  /* color: var(--notion-gray); */
+  font-size: 0.2em;
+  color: var(--notion-gray);
 }
 
 /* .notion-asset-wrapper-pdf > div {
