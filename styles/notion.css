@@ -548,7 +548,7 @@ summary > .notion-h {
   border-left: 2px solid currentcolor;
   padding: 0.1em 0.45em; /* 缩小50% */
   margin: 3px 0; /* 缩小50% */
-  font-size: 12px !important; /* 缩小50% */
+  font-size: 16px !important; /* 缩小50% */
 }
 
 .notion-hr {
