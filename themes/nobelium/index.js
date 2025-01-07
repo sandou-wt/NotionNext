@@ -52,8 +52,7 @@ const LayoutBase = props => {
   const topSlot = <BlogListBar {...props} />
 
   return (
-    <ThemeGlobalNobeliu
-    m.Provider
+    <ThemeGlobalNobelium.Provider
       value={{ searchModal, filterKey, setFilterKey }}>
       <div
         id='theme-nobelium'
