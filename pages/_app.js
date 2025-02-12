@@ -63,6 +63,14 @@ const MyApp = ({ Component, pageProps }) => {
   )
   return (
     <>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-WYCLMJZHJJ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WYCLMJZHJJ');
+      </script>
       {enableClerk ? (
         <ClerkProvider localization={zhCN}>{content}</ClerkProvider>
       ) : (
