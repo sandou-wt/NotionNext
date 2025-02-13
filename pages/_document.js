@@ -30,6 +30,18 @@ class MyDocument extends Document {
             </>
           )}
           <script src="https://analytics.ahrefs.com/analytics.js" data-key="1yaxJDpieHr9lRi80H0MXg" async></script>
+          {/* Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-WYCLMJZHJJ"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-WYCLMJZHJJ');
+              `,
+            }}
+          />
         </Head>
 
         <body>
