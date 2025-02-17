@@ -31,14 +31,14 @@ class MyDocument extends Document {
           )}
           <script src="https://analytics.ahrefs.com/analytics.js" data-key="1yaxJDpieHr9lRi80H0MXg" async></script>
           {/* Google Analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-WYCLMJZHJJ"></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-JFFW5493W6"></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', 'G-WYCLMJZHJJ');
+                gtag('config', 'G-JFFW5493W6');
               `,
             }}
           />
